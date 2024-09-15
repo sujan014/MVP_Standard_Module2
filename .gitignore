@@ -1,0 +1,25 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# Ignore Visual Studio files
+/.vs
+
+# Ignore all binary output folders
+**/obj/
+**/bin/
+**/node_modules/
+
+# Ignore personal files
+**/*.user
+
+# Ignore all appsettings.json
+App/Talent.App.WebApp/appsettings.json
+Talent.Services.Identity/appsettings.json
+Talent.Services.Listing/appsettings.json
+Talent.Services.Profile/appsettings.json
+
+
+# ignore publish profiles:
+**/PublishProfiles/
+**/dist/
