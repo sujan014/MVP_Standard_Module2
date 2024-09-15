@@ -45,11 +45,9 @@ export default function TalentFeed() {
             )
             .then((response) => {
                 if (response.status === 200) {
-                    console.log('Talent Response: ');
-                    console.log(response);
-                    console.log('Talent Response data: ');
+                    //console.log(response);  console.log('Talent Response data: ');
                     if (response.data.success === true) {
-                        console.log(response.data.data);
+                        //console.log(response.data.data);
                         setFeedData(response.data.data);
                     }
                     else {
@@ -77,17 +75,7 @@ export default function TalentFeed() {
                                     talentData={data}
                                 />
                             )
-                        }
-                        {/*{feedData.count > 0 ?                                */}
-                        {/*    feedData.map((data, index) => (*/}
-                        {/*        <TalentCard*/}
-                        {/*            key={index}*/}
-                        {/*            talentData={data}*/}
-                        {/*        />*/}
-                        {/*    )):*/}
-                        {/*    "There are no talents found for your recruitment company"*/}
-                        {/*}*/}
-                        
+                        }                                                
                     </div>
                     <div className='four wide column'>
                         <div className="ui card">
@@ -120,61 +108,3 @@ export default function TalentFeed() {
         </BodyWrapper>
     )        
 }
-//export default class TalentFeed extends React.Component {
-//    constructor(props) {
-//        super(props);
-
-//        let loader = loaderData
-//        loader.allowedUsers.push("Employer")
-//        loader.allowedUsers.push("Recruiter")
-
-//        this.state = {
-//            loadNumber: 5,
-//            loadPosition: 0,
-//            feedData: [],
-//            watchlist: [],
-//            loaderData: loader,
-//            loadingFeedData: false,
-//            companyDetails: null
-//        }
-
-//        this.init = this.init.bind(this);
-
-//    };
-
-//    init() {
-//        let loaderData = TalentUtil.deepCopy(this.state.loaderData)
-//        loaderData.isLoading = false;
-//        this.setState({ loaderData });//comment this
-//    }
-
-//    componentDidMount() {
-//        //window.addEventListener('scroll', this.handleScroll);
-//        this.init()
-//    };
-
-   
-//    render() {
-
-//        return (
-//            <BodyWrapper reload={this.init} loaderData={this.state.loaderData}>
-//                <div className="ui container">
-//                    {/*My code goes here*/}
-//                    <div className='ui grid row'>                    
-//                        <div className='four wide column'>
-//                            <CompanyProfile />
-//                        </div>
-//                        <div className='eight wide column'>
-//                            <TalentCard />
-//                        </div>
-//                        <div className='four wide column'>
-//                            <div className="ui card">
-//                                <FollowingSuggestion />
-//                            </div>
-//                        </div>
-//                    </div>
-//                </div>
-//            </BodyWrapper>
-//        )
-//    }
-//}
